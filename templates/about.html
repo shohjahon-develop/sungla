@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+      <!-- about section -->
+{% for Abouts in aboutss %}
+      <div class="about">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <a href="{{Abouts.get_absolute_url}}"><figure><img src={{Abouts.img.url}} alt="#"/></figure></a>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="titlepage">
+                     <h2>{{Abouts.name}}</h2>
+                     <p>{{Abouts.bio}}</p>
+                  </div>
+                  <a class="read_more" >Read More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+{% endfor %}
+      <!-- about section -->
+
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
+{% endblock content %}

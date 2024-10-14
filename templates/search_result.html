@@ -1,0 +1,4 @@
+<h2>Qidiruv natijalari..</h2>
+{% for glas in barcha_kozoynaklar %}
+<h3><a href="{% url 'glassDetail' glas.slug %}">{{glas.name}}</a></h3>
+{% endfor %}

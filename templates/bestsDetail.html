@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div id="about" class="shop">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-5">
+                  <div  class="shop_img">
+                     <figure><img src={{best.img.url}} alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-7 padding_right0">
+                  <div class="max_width">
+                     <div class="titlepage">
+                        <h2>{{best.name}}</h2>
+                        <p>{{best.bio}}</p>
+                        <a class="read_more" href="#">Shop Now</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+{% endblock content %}

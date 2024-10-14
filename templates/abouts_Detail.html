@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="about">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img src={{about.img.url}} alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="titlepage">
+                     <h2>{{about.name}}</h2>
+                    <a href="{{About.get_absolute_url}}"><p>{{about.bio}}</p></a>
+                  </div>
+                  <a class="read_more" href="#">Read More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+{% endblock content %}
